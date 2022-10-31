@@ -8,6 +8,8 @@ django = "*"
 djangorestframework = "*"
 drf-yasg = "*"
 django-filter = "*"
+django-cors-headers = "*"
+whitenoise = "*"
 
 [dev-packages]
 
