@@ -15,5 +15,4 @@ urlpatterns = [
     path('student/<int:pk>/', views.StudentViews.as_view()),
     # Metsenat
     path('metsenat/', views.MentanetViews.as_view()),
-    path('metsenat/create/', views.MetsenatCreate.as_view()),
 ]

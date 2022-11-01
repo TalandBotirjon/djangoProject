@@ -140,9 +140,3 @@ class MentanetViews(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class MetsenatCreate(CreateAPIView):
-    permission_classes = [IsAdminUser]
-    queryset = Metsenat.objects.all()
-    serializer_class = MetsenatCreateSerializer
-
-
