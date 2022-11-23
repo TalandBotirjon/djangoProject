@@ -3,3 +3,6 @@
 Api use https://metsenatapi.herokuapp.com/redoc/
 
 figma: https://www.figma.com/file/NhRYpWL1n4OgHtdwr2XDgp/Metsenat-club-(FULL)
+
+
+<img src="https://user-images.githubusercontent.com/85695336/203618460-c1b0faf0-7c72-4461-a3f3-7c193e6343ec.png" alt="Girl in a jacket" width="500" height="600">
