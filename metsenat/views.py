@@ -10,7 +10,7 @@ from rest_framework.views import APIView
 from .models import Sponsor, Student, Metsenat
 from rest_framework import status
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import IsAdminUser, IsAuthenticatedOrReadOnly
 from .paginator import ResultsSetPagination
 
 Months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
@@ -51,7 +51,7 @@ class SponsorCreateViews(CreateAPIView):
 
 
 class SponsorListViews(ListAPIView):
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Sponsor.objects.all()
     serializer_class = SponsorListSerializer
     filter_backends = [DjangoFilterBackend]
@@ -60,7 +60,7 @@ class SponsorListViews(ListAPIView):
 
 
 class SponsorDetailViews(APIView):
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def put(self, request, pk):
         sponsor = Sponsor.objects.get(pk=pk)
