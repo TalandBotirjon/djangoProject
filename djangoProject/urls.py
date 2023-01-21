@@ -17,8 +17,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('api/', include('metsenat.urls')),
+    path('api/v1/', include('metsenat.urls')),
     path('admin/', admin.site.urls),
-    path('api/auth/', include('rest_framework.urls')),
-    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('api/v1/auth/', include('rest_framework.urls')),
+    path('api/v1/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
